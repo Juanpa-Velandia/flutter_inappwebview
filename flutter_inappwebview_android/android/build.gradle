@@ -22,11 +22,8 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    // Conditional for compatibility with AGP <4.2.
-    if (project.android.hasProperty("namespace")) {
-        namespace 'com.pichillilorenzo.flutter_inappwebview_android'
-    }
-    compileSdk 34
+    compileSdkVersion(33)
+    namespace = "com.Juanpa_Velandia.flutter_inappwebview"
 
     defaultConfig {
         minSdkVersion 19
